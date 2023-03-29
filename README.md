@@ -1,2 +1,4 @@
 # Clock-Divider
-A clock divider divides the input clock frequency bases on a 32-bit input.
+A clock divider is a digital circuit that takes an input clock signal and produces an output clock signal with a lower frequency. Clock dividers are commonly used in digital systems to provide slower clock signals to different parts of the system, especially when the components require different clock frequencies. 
+
+In this design, the frequency of the output clk_out is equal to the frequency of the input clk_in divided by the value of the ratio(32-bit value) in the Verilog code. In the Code, We have an input clock signal called 'clk_in' with a frequency of 20MHz. In the Simulation, it can be observed that the clk_out has different frequencies because of the variations in the input ratio. For example, for the first 10ms, the ratio is 20,000. So, 20MHz/20,000=1kHz which gives the output clock signal of frequency 1kHz. Similarly, ratio = 10,000 gives clk_out of 2kHz frequency and the ratio = 5000 gives clk_out of 4kHz frequency.
